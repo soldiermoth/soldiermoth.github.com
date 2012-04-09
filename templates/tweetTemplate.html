@@ -1,0 +1,11 @@
+<blockquote>
+	<p><%= text %></p>
+	<% if(!retweet){ %>
+	<small>@soldiermoth</small>
+	<% } else { %>
+	<small>
+		<%- retweeted_status.user.screen_name %>
+		 <i class="icon-retweet"></i> by @soldiermoth
+	</small>
+	<% } %>
+</blockquote>

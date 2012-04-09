@@ -4,3 +4,9 @@ body {
 pre {
 	font-family : Ubuntu, Menlo, monospace;
 }
+.tweetContainer {
+	background-color : #00A0D1
+}
+.row:first-child {
+	height: 38px;
+}

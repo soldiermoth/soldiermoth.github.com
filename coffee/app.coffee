@@ -2,13 +2,16 @@ define [
 	"use!marionette"
 	"jquery"
 	"text!templates/alsoKnownAs.html"
-], (Marionette,$,alsoKnownAsTemplate) ->
+	"cs!TweetView"
+], (Marionette,$,alsoKnownAsTemplate,TweetView) ->
 	app = new Marionette.Application()
 	app.addRegions
-		content : "#content"
+		tweetContainer : "#tweetContainer"
 	app.addInitializer ->
 		$("#name").popover
 			placement : "bottom"
 			title : "Also Known As:"
 			content : alsoKnownAsTemplate
+	app.addInitializer ->
+		@tweetContainer.show new TweetView()
 	return app

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Robert Peck</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold,mono&subset=Latin"/>
+		<title>Robert L. Peck</title>
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:regular,bold,mono&subset=Latin"/>
 		<link rel="stylesheet" href="lib/bootstrap/bootstrap.css"/>
 		<link rel="stylesheet" href="css/local.css"/>
 	</head>
@@ -17,7 +17,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a id="name" class="brand" href="#"><abbr title="">Robert L. Peck</abbr></a>
+					<a id="name" class="brand" href="#"><abbr title>Robert L. Peck</abbr></a>
 					<div class="nav-collapse">
 						<ul class="nav">
 							<li class="active">
@@ -29,6 +29,23 @@
 			</div>
 		</div>
 		<div id="content" class="container">
+			<div class="row"></div>
+			<div class="row">
+				<div class="span6">
+					<h1>Tweets</h1>
+					<div id="tweetContainer"></div>
+					<a class="btn btn-large" 
+						href="//twitter.com/soldiermoth">See More Tweets</a>
+				</div>
+				<div class="span6">
+					<h1>StackOverflow Answers</h1>
+					<div id="soAnswerContainer"></div>
+					<a class="btn btn-large"
+						href="//stackoverflow.com/users/68172/soldier-moth?tab=answers">
+						See More Answers
+					</a>
+				</div>
+			</div>
 		</div>
 		<script>
 			var require = {
@@ -55,8 +72,17 @@
 						attach : "_"
 					},
 					marionette : {
-						deps : ["use!backbone"],
-						attach : function(Backbone) {
+						deps : ["use!backbone","use!underscore"],
+						attach : function(Backbone,_) {
+							//Modify Marionette to use pre fetched template
+							Backbone.Marionette.TemplateCache.loadTemplate = 
+								function(template, callback){
+								callback.call(this,_.template(template));
+							};
+							Backbone.Marionette.Renderer.renderTemplate =
+								function(template,data){
+								return template(data);
+							};
 							return Backbone.Marionette;
 						}
 					}
