@@ -3,8 +3,7 @@ define [
 	"use!underscore"
 	"use!marionette"
 	"text!templates/tweetTemplate.html"
-	"text!templates/tweetsTemplate.html"
-], (Backbone, _, Marionette, tweetTemplate, tweetsTemplate) ->
+], (Backbone, _, Marionette, tweetTemplate) ->
 	Tweets = Backbone.Collection.extend
 		url : "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=soldiermoth&callback=?&include_entities=true&include_rts=true"
 	TweetView = Marionette.ItemView.extend
@@ -36,5 +35,4 @@ define [
 		initialize : ->
 			@collection = new Tweets()
 			@collection.fetch()
-		template : tweetsTemplate
 		itemView : TweetView

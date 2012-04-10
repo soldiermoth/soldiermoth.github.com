@@ -3,7 +3,9 @@
 	<head>
 		<title>Robert L. Peck</title>
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:regular,bold,mono&subset=Latin"/>
+		<link rel="stylesheet" href="lib/prettify/prettify.css"/>
 		<link rel="stylesheet" href="lib/bootstrap/bootstrap.css"/>
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap-responsive.css"/>
 		<link rel="stylesheet" href="css/local.css"/>
 	</head>
 	<body>
@@ -17,11 +19,14 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a id="name" class="brand" href="#"><abbr title>Robert L. Peck</abbr></a>
+					<a class="brand" href="#">Robert L. Peck</a>
 					<div class="nav-collapse">
 						<ul class="nav">
 							<li class="active">
 								<a href="#"><i class="icon-home icon-white"></i> Home</a>
+							</li>
+							<li>
+								<a id="aka" href="#"><i class="icon-user icon-white"></i> Also Known As</a>
 							</li>
 						</ul>
 					</div>
@@ -31,15 +36,15 @@
 		<div id="content" class="container">
 			<div class="row"></div>
 			<div class="row">
-				<div class="span6">
+				<div class="span4">
 					<h1>Tweets</h1>
 					<div id="tweetContainer"></div>
 					<a class="btn btn-large" 
 						href="//twitter.com/soldiermoth">See More Tweets</a>
 				</div>
-				<div class="span6">
+				<div class="span4">
 					<h1>StackOverflow Answers</h1>
-					<div id="soAnswerContainer"></div>
+					<div id="stackContainer"></div>
 					<a class="btn btn-large"
 						href="//stackoverflow.com/users/68172/soldier-moth?tab=answers">
 						See More Answers
@@ -51,11 +56,15 @@
 			var require = {
 				baseUrl : "/coffee",
 				paths : {
+					//RequireJS Plugins
 					"cs" : "../lib/require/plugins/cs",
 					"use" : "../lib/require/plugins/use",
 					"order" : "../lib/require/plugins/order",
 					"text" : "../lib/require/plugins/text",
+					"domReady" : "../lib/require/plugins/domReady",
+					//Folder Paths
 					"templates" : "../templates",
+					//JS libraries
 					"jquery" : "../lib/jquery/jqueryShim",
 					"underscore" : "../lib/underscore/underscore",
 					"backbone" : "../lib/backbone/backbone",

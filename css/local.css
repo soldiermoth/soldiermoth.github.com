@@ -10,3 +10,13 @@ pre {
 .row:first-child {
 	height: 38px;
 }
+
+pre.prettyprinted {
+	overflow-x: scroll;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+#stackContainer blockquote {
+	word-break: break-word;
+}
