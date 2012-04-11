@@ -17,7 +17,7 @@ define [
 			_.each jsonData.entities.user_mentions,(mention) ->
 				newText = newText.replace(
 					oldText.slice(mention.indices[0],mention.indices[1]),
-					"<a href='https://twitter.com/#{mention.screen_name}'>@#{mention.screen_name}</a>",
+					"<a target='_blank' href='https://twitter.com/#{mention.screen_name}'>@#{mention.screen_name}</a>",
 					1
 				)
 			_.each jsonData.entities.urls,(url) ->
@@ -36,3 +36,7 @@ define [
 			@collection = new Tweets()
 			@collection.fetch()
 		itemView : TweetView
+		appendHtml : (collectionView, itemView) ->
+			if collectionView.collection.first() == itemView.model
+				itemView.$el.addClass "active"
+			collectionView.$el.append itemView.el

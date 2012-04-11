@@ -26,4 +26,7 @@ define [
 		itemView : AnswerView
 		onRender : ->
 			prettyPrint()
-			@$el.carousel()
+		appendHtml : (collectionView, itemView) ->
+			if collectionView.collection.first() == itemView.model
+				itemView.$el.addClass "active"
+			collectionView.$el.append itemView.el
