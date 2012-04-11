@@ -15,6 +15,10 @@ define [
 			title : "Also Known As:"
 			content : alsoKnownAsTemplate
 	app.addInitializer ->
+		@tweetContainer.on "view:show", =>
+			$("#tweetCarousel").carousel()
 		@tweetContainer.show new TweetView()
+		@stackContainer.on "view:show", =>
+			$("#stackCarousel").carousel()
 		@stackContainer.show new StackView()
 	return app

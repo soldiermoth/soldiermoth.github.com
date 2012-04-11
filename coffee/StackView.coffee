@@ -9,7 +9,7 @@ define [
 		url : "http://api.stackexchange.com/2.0/users/68172/answers?order=desc&sort=creation&site=stackoverflow&filter=!9Tk6P.j1M"
 		parse : (data) -> data.items
 	AnswerView = Marionette.ItemView.extend
-		className : "well"
+		className : "well item"
 		template : tweetTemplate
 		serializeData : ->
 			jsonData = @model.toJSON()
@@ -24,4 +24,6 @@ define [
 			@collection = new Answers()
 			@collection.fetch()
 		itemView : AnswerView
-		onRender : -> prettyPrint()
+		onRender : ->
+			prettyPrint()
+			@$el.carousel()
