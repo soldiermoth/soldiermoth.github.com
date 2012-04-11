@@ -1,11 +1,14 @@
 <blockquote>
 	<p><%= text %></p>
 	<% if(!retweet){ %>
-	<small>@soldiermoth</small>
+	<small><a href="//twitter.com/soldiermoth" target="_blank">@soldiermoth</a></small>
 	<% } else { %>
 	<small>
-		<%- retweeted_status.user.screen_name %>
-		 <i class="icon-retweet"></i> by @soldiermoth
+		<a href="//twitter.com/<%- retweeted_status.user.screen_name %>"
+			target="_blank">
+		@<%- retweeted_status.user.screen_name %></a><br/>
+			<i class="icon-retweet"></i> Retweeted by
+			<a href="//twitter.com/soldiermoth" target="_blank">@soldiermoth</a>
 	</small>
 	<% } %>
 </blockquote>

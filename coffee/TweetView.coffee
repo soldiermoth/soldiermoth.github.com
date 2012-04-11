@@ -12,6 +12,7 @@ define [
 		serializeData : ->
 			jsonData = @model.toJSON()
 			jsonData.retweet = false
+			console.log jsonData
 			oldText = jsonData.text
 			newText = jsonData.text
 			_.each jsonData.entities.user_mentions,(mention) ->
@@ -28,7 +29,7 @@ define [
 				)
 			if oldText.match /^RT/
 				jsonData.retweet = true
-				newText.replace /RT[^:]+:/, ""
+				newText = newText.replace /^RT.*a>:/, ""
 			jsonData.text = newText
 			return jsonData
 	TweetsView = Marionette.CollectionView.extend
