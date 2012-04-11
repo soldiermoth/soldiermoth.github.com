@@ -7,7 +7,7 @@ define [
 	Tweets = Backbone.Collection.extend
 		url : "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=soldiermoth&callback=?&include_entities=true&include_rts=true"
 	TweetView = Marionette.ItemView.extend
-		className : "well item"
+		className : "item"
 		template : tweetTemplate
 		serializeData : ->
 			jsonData = @model.toJSON()

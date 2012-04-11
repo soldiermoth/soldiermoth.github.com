@@ -9,7 +9,7 @@ define [
 		url : "http://api.stackexchange.com/2.0/users/68172/answers?order=desc&sort=creation&site=stackoverflow&filter=!9Tk6P.j1M"
 		parse : (data) -> data.items
 	AnswerView = Marionette.ItemView.extend
-		className : "well item"
+		className : "item"
 		template : tweetTemplate
 		serializeData : ->
 			jsonData = @model.toJSON()
