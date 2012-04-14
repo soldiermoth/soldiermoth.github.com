@@ -32,10 +32,10 @@ define [
 			jsonData.text = newText
 			return jsonData
 	TweetsView = Marionette.CollectionView.extend
+		itemView : TweetView
 		initialize : ->
 			@collection = new Tweets()
 			@collection.fetch()
-		itemView : TweetView
 		appendHtml : (collectionView, itemView) ->
 			if collectionView.collection.first() == itemView.model
 				itemView.$el.addClass "active"

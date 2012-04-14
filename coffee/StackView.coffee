@@ -11,21 +11,17 @@ define [
 	AnswerView = Marionette.ItemView.extend
 		className : "item"
 		template : tweetTemplate
-		serializeData : ->
-			jsonData = @model.toJSON()
-			return jsonData
 		onRender : ->
 			@$("img").addClass "thumbnail"
 			_.each @$("img"), (img) ->
 				$(img).width("100%") if img.width > 350
 			@$("pre").addClass "prettyprint linenums pre-scrollable"
 	AnswersView = Marionette.CollectionView.extend
+		itemView : AnswerView
 		initialize : ->
 			@collection = new Answers()
 			@collection.fetch()
-		itemView : AnswerView
-		onRender : ->
-			prettyPrint()
+		onRender : -> prettyPrint()
 		appendHtml : (collectionView, itemView) ->
 			if collectionView.collection.first() == itemView.model
 				itemView.$el.addClass "active"

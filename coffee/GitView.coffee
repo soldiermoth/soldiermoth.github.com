@@ -21,28 +21,25 @@ define [
 			_.first data, 1
 	CommitView = Marionette.ItemView.extend
 		template : commitTemplate
-		serializeData : ->
-			console.log @model.toJSON()
-			@model.toJSON()
 	CommitsView = Marionette.CollectionView.extend
 		itemView : CommitView
 	RepoView = Marionette.Layout.extend
 		className : "item"
+		template : repoTemplate
+		regions :
+			commitSection : ".commits"
 		initialize : ->
 			repoCommits = new Commits [], repo : @model.get "name"
 			@defFetch = $.Deferred()
 			repoCommits.fetch success : => @defFetch.resolve repoCommits
-		regions :
-			commitSection : ".commits"
 		onRender : ->
 			@defFetch.done (collection) =>
 				@commitSection.show new CommitsView collection : collection
-		template : repoTemplate
 	ReposView = Marionette.CollectionView.extend
+		itemView : RepoView
 		initialize : ->
 			@collection = new Repos()
 			@collection.fetch()
-		itemView : RepoView
 		appendHtml : (collectionView, itemView) ->
 			if collectionView.collection.first() == itemView.model
 				itemView.$el.addClass "active"
