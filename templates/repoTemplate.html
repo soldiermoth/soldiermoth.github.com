@@ -1,0 +1,15 @@
+<h2>
+	<% if(fork) print("Fork of:") %>
+	<%- name %>
+</h2>
+<br/>
+<h3>Description:</h3>
+<p><%- description %></p>
+<h3>Latest Commit:</h3>
+<div class="commits">
+</div>
+
+<a href="<%- html_url %>" target="_blank">
+	<i class="icon-share-alt"></i>
+	Link to Repo
+</a>

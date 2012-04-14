@@ -15,3 +15,4 @@
 ## Makes use of the following APIs:
 * [Twitter](https://dev.twitter.com/)
 * [StackExchange](https://api.stackexchange.com/)
+* [GitHub](http://developer.github.com/)

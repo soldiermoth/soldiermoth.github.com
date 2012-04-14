@@ -1,0 +1,12 @@
+<blockquote>
+	<p><%- commit.message %></p>
+	<small>
+		by <%- !!author ? author.login : commit.author.name %>
+		<br/>
+		<a href="//github.com/soldiermoth/<%- repo %>/commit/<%- sha %>"
+			target="_blank">
+			<i class="icon-share-alt"></i>
+			Link to Commit
+		</a>
+	</small>
+</blockquote>

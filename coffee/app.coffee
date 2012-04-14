@@ -1,14 +1,16 @@
 define [
-	"use!marionette"
 	"jquery"
-	"text!templates/alsoKnownAs.html"
+	"use!marionette"
 	"cs!TweetView"
 	"cs!StackView"
-], (Marionette,$,alsoKnownAsTemplate,TweetView,StackView) ->
+	"cs!GitView"
+	"text!templates/alsoKnownAs.html"
+], ($,Marionette,TweetView,StackView,GitView,alsoKnownAsTemplate) ->
 	app = new Marionette.Application()
 	app.addRegions
 		tweetContainer : "#tweetContainer"
 		stackContainer : "#stackContainer"
+		gitContainer : "#gitContainer"
 	app.addInitializer ->
 		$("#aka").popover
 			placement : "bottom"
@@ -21,4 +23,7 @@ define [
 		@stackContainer.on "view:show", ->
 			$("#stackCarousel").carousel()
 		@stackContainer.show new StackView()
+		@gitContainer.on "view:show", ->
+			$("#gitCarousel").carousel()
+		@gitContainer.show new GitView()
 	return app
