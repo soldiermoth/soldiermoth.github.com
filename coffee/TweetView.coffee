@@ -1,7 +1,7 @@
 define [
-	"use!backbone"
-	"use!underscore"
-	"use!marionette"
+	"backbone"
+	"underscore"
+	"marionette"
 	"text!templates/tweetTemplate.html"
 ], (Backbone, _, Marionette, tweetTemplate) ->
 	Tweets = Backbone.Collection.extend

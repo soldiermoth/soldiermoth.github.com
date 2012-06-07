@@ -1,8 +1,8 @@
 define [
 	"jquery"
-	"use!underscore"
-	"use!marionette"
-	"use!backbone"
+	"underscore"
+	"marionette"
+	"backbone"
 	"text!templates/repoTemplate.html"
 	"text!templates/commitTemplate.html"
 ], ($, _, Marionette, Backbone, repoTemplate, commitTemplate) ->

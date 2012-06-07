@@ -123,48 +123,42 @@
 		</div>
 		<script>
 			var require = {
-				baseUrl : "/coffee",
-				paths : {
+				baseUrl: "/coffee",
+				paths: {
 					//RequireJS Plugins
 					"cs" : "../lib/require/plugins/cs",
-					"use" : "../lib/require/plugins/use",
 					"order" : "../lib/require/plugins/order",
 					"text" : "../lib/require/plugins/text",
 					"domReady" : "../lib/require/plugins/domReady",
 					//Folder Paths
 					"templates" : "../templates",
 					//JS libraries
-					"jquery" : "../lib/jquery/jqueryShim",
+					"jquery" : "../lib/jquery/jquery-1.7.2.min",
 					"underscore" : "../lib/underscore/underscore",
 					"backbone" : "../lib/backbone/backbone",
 					"marionette" : "../lib/marionette/backbone.marionette"
 				},
-				use : {
-					backbone : {
-						deps : ["use!underscore","jquery"],
-						attach : function(_,$) {
-							return Backbone;
-						}
+				shim: {
+					jquery: {
+						exports: "$"
 					},
-					underscore : {
-						attach : "_"
+					backbone: {
+						deps: ["underscore","jquery"],
+						exports: "Backbone"
 					},
-					marionette : {
-						deps : ["use!backbone","use!underscore"],
-						attach : function(Backbone,_) {
-							//Modify Marionette to use pre fetched template
-							Backbone.Marionette.TemplateCache.loadTemplate = 
-								function(template, callback){
-								callback.call(this,_.template(template));
-							};
-							Backbone.Marionette.Renderer.renderTemplate =
-								function(template,data){
-								return template(data);
-							};
-							return Backbone.Marionette;
-						}
-					}
-				}
+					underscore: {
+						exports: "_"
+					},
+					marionette: {
+						deps: ["backbone"],
+						exports: "Backbone.Marionette"
+					},
+					"../lib/prettify/prettify":["jquery"],
+					"../lib/bootstrap/bootstrap":["jquery"]
+				},
+				deps: [
+					"cs!loadOnStart",
+				]
 			};
 		</script>
 		<script data-main="../js/main.js" src="lib/require/require.js"></script>

@@ -1,6 +1,6 @@
 define [
 	"jquery"
-	"use!marionette"
+	"marionette"
 	"cs!TweetView"
 	"cs!StackView"
 	"cs!GitView"

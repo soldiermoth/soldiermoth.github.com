@@ -1,8 +1,8 @@
 define [
-	"use!backbone"
+	"backbone"
 	"jquery"
-	"use!underscore"
-	"use!marionette"
+	"underscore"
+	"marionette"
 	"text!templates/answerTemplate.html"
 ], (Backbone, $, _, Marionette, tweetTemplate) ->
 	Answers = Backbone.Collection.extend
