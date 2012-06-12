@@ -7,9 +7,9 @@ var require = {
 		text: "lib/require/plugins/text",
 		//Js Libs
 		jquery: "lib/jquery/jquery-1.7.2.min",
-		underscore: "lib/underscore/underscore",
-		backbone: "lib/backbone/backbone",
-		marionette: "lib/marionette/backbone.marionette",
+		underscore: "lib/underscore/underscore-1.3.1",
+		backbone: "lib/backbone/backbone-0.9.2",
+		marionette: "lib/marionette/marionette-0.7.0",
 		//JQuery Libs
 		prettify: "lib/prettify/prettify",
 		bootstrap: "lib/bootstrap/bootstrap"
