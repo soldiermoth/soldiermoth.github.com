@@ -1,5 +1,5 @@
 # Nameplate site for Robert Peck
-# Check it out [here](http://soldiermoth.github.com)
+# Check it out [here](http://soldiermoth.com)
 
 ## Built Using the following Libraries:
 * [Underscore](http://documentcloud.github.com/underscore/)

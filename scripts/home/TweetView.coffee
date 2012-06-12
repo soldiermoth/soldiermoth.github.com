@@ -2,14 +2,14 @@ define [
 	"backbone"
 	"underscore"
 	"marionette"
-	"text!templates/tweetTemplate.html"
+	"text!./templates/tweetTemplate.html"
 ], (Backbone, _, Marionette, tweetTemplate) ->
 	Tweets = Backbone.Collection.extend
-		url : "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=soldiermoth&callback=?&include_entities=true&include_rts=true"
+		url: "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=soldiermoth&callback=?&include_entities=true&include_rts=true"
 	TweetView = Marionette.ItemView.extend
-		className : "item"
-		template : tweetTemplate
-		serializeData : ->
+		className: "item"
+		template: tweetTemplate
+		serializeData: ->
 			jsonData = @model.toJSON()
 			jsonData.retweet = false
 			oldText = jsonData.text
@@ -32,11 +32,11 @@ define [
 			jsonData.text = newText
 			return jsonData
 	TweetsView = Marionette.CollectionView.extend
-		itemView : TweetView
-		initialize : ->
+		itemView: TweetView
+		initialize: ->
 			@collection = new Tweets()
 			@collection.fetch()
-		appendHtml : (collectionView, itemView) ->
+		appendHtml: (collectionView, itemView) ->
 			if collectionView.collection.first() == itemView.model
 				itemView.$el.addClass "active"
 			collectionView.$el.append itemView.el

@@ -1,8 +1,8 @@
 define [
 	"underscore"
 	"marionette"
-	"../lib/prettify/prettify",
-	"../lib/bootstrap/bootstrap"
+	"prettify",
+	"bootstrap"
 ], (_,Marionette) ->
 
 	Marionette.TemplateCache.loadTemplate = (template, callback) ->
