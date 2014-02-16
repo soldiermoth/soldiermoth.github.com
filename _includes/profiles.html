@@ -1,0 +1,9 @@
+{% raw %}
+<div ng-controller="ProfileCtrl">
+	<div class="list-group">
+		<a ng-repeat="profile in profiles"
+			 href="{{profile.url}}"
+			 class="list-group-item">{{profile.name}}</a>
+	</div>
+</div>
+{% endraw %}

@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Robert L. Peck</title>
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:regular,bold,mono&subset=Latin"/>
-		<link rel="stylesheet" href="/scripts/lib/prettify/prettify.css"/>
-		<link rel="stylesheet" href="/scripts/lib/bootstrap/bootstrap.css"/>
-		<link rel="stylesheet" href="/scripts/lib/bootstrap/bootstrap-responsive.css"/>
-		<link rel="stylesheet" href="/css/local.css"/>
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-  		_gaq.push(['_setAccount', 'UA-30849962-1']);
-  		_gaq.push(['_trackPageview']);
-			!function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			}();
-		</script>	
-	</head>
-	<body>
-		<div id="navbarContainer"></div>
-		<div id="content" class="container"></div>
-		<script src="/scripts/common/config.js"></script>
-		<script data-main="cs!home/main" src="/scripts/lib/require/require.js"></script>
-	</body>
-</html>
+---
+layout: bootstrap
+name: home
+---
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			{% include profiles.html %}
+		</div>
+	</div>
+</div>
