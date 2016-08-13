@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/soldiermoth
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://soldiermoth.com
+  * I am soldiermoth (https://keybase.io/soldiermoth) on keybase.
+  * I have a public key with fingerprint 556E 35BC 7F72 951B 3275  E9A4 C40D 2806 17FD 76AE
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01205731e183261c934ea71172bc180251d8c26686613257bf64b80ea0a815cb9d430a",
+            "fingerprint": "556e35bc7f72951b3275e9a4c40d280617fd76ae",
+            "host": "keybase.io",
+            "key_id": "c40d280617fd76ae",
+            "kid": "0101e1d01870a67278276132cdb6c9f5959e294e38c51a6e181604c62e2ec086638a0a",
+            "uid": "338f5269af8826580e78e273412e2d19",
+            "username": "soldiermoth"
+        },
+        "service": {
+            "hostname": "soldiermoth.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471067828,
+    "expire_in": 157680000,
+    "prev": "fff4362e79ffd1ee95ec1258f0d885dfce7e34414c82df3b0a210a1991034b61",
+    "seqno": 11,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.55
+Comment: https://keybase.io/crypto
+
+yMNtAnicbZJtUFRVAIZ3ke+GgEZIJoq6OKXOQvfc77smw6TbYDApKZKytNyPc5cr
+7N5ld9mVWVHMcQihGtBGMhB/ZDqQNAmRFLMjDYwoUopYlqTDyBKmJSQRoED3Mvmr
+zp8z55z3fc/7nDk9Uct0kfqeqFWhT897WvX93Y2lutzWjnYfwitiGWL0IUVwaYLF
+InS5LUWyiBgRFGAoSeMAAgbHKCCwOAE5GgAa4wXAoBgJREbAKIqhKIBjJM1LFMEz
+KORQjgGkwLMigaMcYkAk2W6FTodTtrvVWJKkIE7yAi3RGEsCHsdoErIcIRCoiDEo
+BWhJpCkOqsZCxaU51HI854KpsqLuqQvLUr3/0T/ujaqdRRQwNMpRNEYzGK01FESe
+EliJZEkWYiwBcUYgAUepeIBCCYHCIAYFVKXBGW6pd+lSHI4zEolRLCcxDEaRKiDN
+QIzGCaAaRMBqQhd02jkbVNUupViUodOmuAuRcgOiHnhkAWpvq8H8V5QqKDY1weFU
+3IqgFKuHhW63w6h53WUOTeyFvOXfGAsv20X1MVWDBzpdsmJHjEBVCm5ZywUEDVBK
+xWUMCNzlkJ3QImsKkqYYVB3aNdCjRkqSROAqL81KkgggZEkoAIxkJFRkGFKUBEhD
+nCAAITCYKOE8ymEA5QDLAhQneAogGliJXVGzgdqTs2pMstXOuUudECn/ttscrNNH
+6kJDgrRfpouMiHn8976zRi8kl9+pUzaX3GhZNtj+c+4n1WQyaH1QO+NL2kmYAhnx
+OVs+e9R7K2fs0Pbbyf4z56tTc3ISyPVR3rb73cu/upHGVx/7nc/H5ytTapusW9Jn
+55Aa4gA8nHs97973r72x6Huu/qo3ZLJ56P1A0bs7G7vuyb9uOuvf/pdccHx0siqo
+dMJbvKPnvV0vNDPjtoNT7Nmkm6HW/GHXwOTDh6ZrfCWKL+QPxf55Z/050zaDyWwI
+9NWdGGipeTIpEHLhKdPGVMNAVWf0+IpK3fmxzIh9Oyr2Gh154tuDcXuyjn6zYBpR
+6lyP/DWH49sKttpuxVZ6ek9bkhPDwh3E6bSO44B71T87l7Y18+LzbfWJYuepbNtY
+Vu7MVEzKxpd+mvVNe70Fjt7xFWUHp83ZuefGsz1f1JnrPRld8/W/HNjNbzgpxoX9
+ven62oTRyc7lEUb/mw+y9jf9eCnI1BB3efAJ8vUPCqs6vj6aH1yIrlkV2xhzwnek
+99rHo05fXcHLea8Ernx5W8AvjKz5XO8vcd5kW5KKQnPSp9o3359Y2TVbBX6bmPxo
+EXa3hD0TXDbTf+RuxuVTw6uvDKHvTOeHeBbX7mtftwH9Iy6auRRUfCh8eOVQQu2n
+yamZmH5v9kXzaFPDi+lEwzrf3FuJ+ubA/m19u8PjK0bIk+be5h8G+7wVZ1Yrx/rb
+n7374R5r+vDVlH8Ake/EpQ==
+=d3Rx
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/soldiermoth
+
+==================================================================
