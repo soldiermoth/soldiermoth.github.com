@@ -42,7 +42,7 @@ function StackOverflowCtrl($scope, $http, $sce) {
 			site: "stackoverflow",
 			filter: "!)dwyYtvyHxcBq8NRpT*n2RM-H3dXhQw-hIKAov1.AojZyP0Ia"
 		}
-		$http.get("http://api.stackexchange.com/2.0/users/68172/answers", { params: params })
+		$http.get("https://api.stackexchange.com/2.0/users/68172/answers", { params: params })
 			.success(function (resp) {
 				$scope.answers.push.apply($scope.answers,resp.items)
 				$scope.hasMore = resp.has_more
