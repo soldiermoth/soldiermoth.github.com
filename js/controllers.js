@@ -1,6 +1,13 @@
 function GooglePlusCtrl($scope, $http) {
 }
 
+function TimelineCtrl($scope) {
+	var svg = d3.select("#timeline").append("svg").attr("width",400).attr("height",800)
+	_.chain(1989).range(new Date().getFullYear() + 1).reverse().each(function(year,index){
+		svg.append("circle").attr("cx",50).attr("cy",20 + index * 25).attr("r",5).attr("fill","black")
+	})
+}
+
 function GithubCtrl($scope, $http) {
 	$scope.page = 1;
 	$scope.hasMore = true;
@@ -16,18 +23,6 @@ function GithubCtrl($scope, $http) {
 	$scope.capitalize = function(str) { return str.charAt(0).toUpperCase() + str.slice(1); }
 	$scope.fetchMore = function() { $scope.page += 1; fetchEvents() }
 	fetchEvents()
-}
-
-function ProfileCtrl($scope) {
-	$scope.profiles = [
-		{ name: "Twitter", url: "http://twitter.com/soldiermoth" },
-		{ name: "Google+", url: "https://plus.google.com/u/0/+RobertPecksoldiermoth" },
-		{ name: "LinkedIn", url: "http://www.linkedin.com/pub/robert-peck/11/616/b54" },
-		{ name: "StackOverflow", url: "http://stackoverflow.com/users/68172/soldier-moth" },
-		{ name: "StackOverflow Careers", url: "http://careers.stackoverflow.com/peck" },
-		{ name: "Github", url: "https://github.com/soldiermoth" },
-		{ name: "Facebook", url: "https://www.facebook.com/bobby.peck" }
-	]
 }
 
 function StackOverflowCtrl($scope, $http, $sce) {

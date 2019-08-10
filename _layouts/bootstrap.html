@@ -3,18 +3,15 @@
 	<head>
 		<title>Robert L. Peck</title>
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:regular,bold,mono&subset=Latin"/>
-		<link rel="stylesheet" href="/scripts/lib/prettify/prettify.css"/>
-		<link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="/public/bootstrap-4.1.1/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="/css/jumbotron-narrow.css"/>
 		<link rel="stylesheet" href="/css/local.css"/>
+		<link rel="stylesheet" href="/css/cover.css"/>
 		{% include analytics.html %}
 	</head>
-	<body ng-app>
-		{% include header.html %}
+	<body ng-app class="text-center">
+		<!-- {% include header.html %} -->
 		{{ content }}
-		<script src="/public/underscore/js/underscore-min.js"></script>
-		<script src="/public/angular/js/angular.min.js"></script>
-		<script src="/public/angular/js/angular-sanitize.min.js"></script>
-		<script src="/js/controllers.js"></script>
+		{% include scripts.html %}
 	</body>
 </html>
