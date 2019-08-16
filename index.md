@@ -7,7 +7,7 @@ layout: default
 
 # Contact
 
-{% for social in site.social %}
+{% for social in site.data.social %}
 | [{{ social.name }}]({{ social.url }}) |
 {%- endfor %}
 
