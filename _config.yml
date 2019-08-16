@@ -1,17 +1,4 @@
 title:  "Robert Peck"
 theme: "jekyll-theme-dinky"
 repository: "soldiermoth/soldiermoth.github.com"
-
-social:
-  - name: Facebook
-    url: "https://www.facebook.com/bobby.peck"
-  - name: Twitter
-    url: "https://twitter.com/soldiermoth"
-  - name: StackOverflow
-    url: "https://stackoverflow.com/users/68172/soldier-moth"
-  - name: StackOverflow Careers
-    url: "https://careers.stackoverflow.com/peck"
-  - name: LinkedIn
-    url: "https://www.linkedin.com/pub/robert-peck/11/616/b54"
-  - name: Instagram
-    url: "https://instagram.com/soldier.moth/"
+google_analytics: 'UA-30849962-1'

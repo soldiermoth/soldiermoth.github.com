@@ -1,14 +1,15 @@
 ---
-profiles:
-  - name: Twitter
-    url: http://twitter.com/soldiermoth
-  - name: Github
-    url: https://github.com/soldiermoth
-  - name: LinkedIn
-    url: http://www.linkedin.com/pub/robert-peck/11/616/b54
-  - name: StackOverflow
-    url: http://stackoverflow.com/users/68172/soldier-moth
-  - name: StackOverflow Careers
-    url: http://careers.stackoverflow.com/peck
-  - name: Facebook
-    url: https://www.facebook.com/bobby.peck
+- name: Github
+  url: https://github.com/soldiermoth
+- name: Instagram
+  url: "https://instagram.com/soldier.moth/"
+- name: StackOverflow
+  url: http://stackoverflow.com/users/68172/soldier-moth
+- name: Twitter
+  url: http://twitter.com/soldiermoth
+- name: StackOverflow Careers
+  url: http://careers.stackoverflow.com/peck
+- name: LinkedIn
+  url: http://www.linkedin.com/pub/robert-peck/11/616/b54
+- name: Facebook
+  url: https://www.facebook.com/bobby.peck
