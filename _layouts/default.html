@@ -19,9 +19,11 @@
          <img src="/photos/sunglasses.jpeg" style="border-radius: 50%" width="150"/>
          <!-- <p class="header">{{ site.description | default: site.github.project_tagline }}</p> -->
 
-         <!-- <ul>
-            <li><a href="https://soldiermoth.com/bobbys-players">Video Players</a></li>
-         </ul> -->
+         <ul>
+          {% for social in site.data.social %}
+          <li><a href="{{social.url}}">{{ social.name }}</a></li>
+          {%- endfor %}
+         </ul>
 
       </header>
 
