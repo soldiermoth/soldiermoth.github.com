@@ -22,7 +22,8 @@ A command-line utility for colorizing & querying HLS files
 <dl>
    <dt>Brightcove</dt>
    <dd>
-      <li>2018-current - Engineering Manager</li>
+      <li>2020-current - Senior Principal Engineer </li>
+      <li>2018-2020 - Engineering Manager</li>
       <li>2016-2018 - Principal Software Engineer</li>
       <li>2015-2016 - Senior Software Engineer</li>
       <li>2014-2015 - Software Engineer</li>
