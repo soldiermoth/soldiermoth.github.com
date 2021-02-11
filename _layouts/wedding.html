@@ -13,27 +13,13 @@
     <![endif]-->
   </head>
   <body>
-    <video id="myVideo" controls autoplay></video>
-
-<!-- Use HLS.js to support the HLS format in browsers. -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script>
-  (function(){
-    // Replace with your asset's playback ID
-    var url =  "https://stream.mux.com/GvTqF44YQoql02rCI2AbUkVaO7eLDlmn58rh4CJPb31s.m3u8";
-    var video = document.getElementById("myVideo");
-    
-    // Let native HLS support handle it if possible
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = url;
-    } else if (Hls.isSupported()) {
-      // HLS.js-specific setup code
-      hls = new Hls();
-      hls.loadSource(url);
-      hls.attachMedia(video);
-    }
-  })();
-</script>
+    <iframe
+      width="360"
+      height="480"
+      src="https://www.youtube.com/embed/ShruWgA3h0s?autoplay=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
     
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     {% if site.google_analytics %}
