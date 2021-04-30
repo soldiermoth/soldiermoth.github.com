@@ -16,6 +16,9 @@ A simple XML formatter command-line utility
 ## [HLSq](https://github.com/soldiermoth/hlsq)
 A command-line utility for colorizing & querying HLS files
 
+## [CSVX](https://github.com/soldiermoth/csvx)
+A command-line utility for working with CSV files
+
 # History
 
 
